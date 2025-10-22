@@ -3,7 +3,7 @@ name: Python CI
 on:
   push:
     branches:
-      - moreno  # Cambia esta rama por la tuya si es diferente
+      - sanchez  # Cambia esta rama por la tuya si es diferente
 
 jobs:
   build:
