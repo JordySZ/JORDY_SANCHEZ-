@@ -24,3 +24,7 @@ jobs:
 
       - name: Ejecutar pruebas con pytest
         run: pytest -v
+      - name: Run tests
+  run: |
+    export PYTHONPATH=$PYTHONPATH:./app
+    pytest
