@@ -16,7 +16,7 @@ EXPOSE 8080
 
 # Comando para ejecutar la aplicación. Si es un archivo Python principal, usa:
 CMD ["python", "app/main.py"]
-=======
+
 # Usa una imagen oficial de Python
 FROM python:3.11-slim
 
