@@ -1,3 +1,4 @@
+
 # Usar la imagen base de Python 3.9
 FROM python:3.9-slim
 
@@ -15,3 +16,22 @@ EXPOSE 8080
 
 # Comando para ejecutar la aplicación. Si es un archivo Python principal, usa:
 CMD ["python", "app/main.py"]
+=======
+# Usa una imagen oficial de Python
+FROM python:3.11-slim
+
+# Crea el directorio de trabajo
+WORKDIR /app
+
+# Copia los archivos
+COPY . .
+
+# Instala dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expone el puerto de Flask
+EXPOSE 5000
+
+# Comando para ejecutar la app
+CMD ["python", "app.py"]
+

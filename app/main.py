@@ -1,5 +1,14 @@
-def add(a, b):
-    return a + b
+from flask import Flask, jsonify
 
-def subtract(a, b):
-    return a - b
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return jsonify({"message": "Hola Mundo desde GitHub Actions y Docker"})
+
+@app.route('/suma/<int:a>/<int:b>')
+def suma(a, b):
+    return jsonify({"resultado": a + b})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
